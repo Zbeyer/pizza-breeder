@@ -4,8 +4,16 @@
 </head>
 <body>
 	{{! isDebug }}
+	{{> app }}
 </body>
+
+<template name="app">
+	{{> printJSON pizzeria }}
+
+	{{> pizza samplePizza}}
+</template>
 
 <template name="pizza">
 	<i>Pizza</i>
+	{{foo}}
 </template>
