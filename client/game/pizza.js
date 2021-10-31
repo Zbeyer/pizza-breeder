@@ -1,13 +1,41 @@
-samplePizza = {
-	name: 'sample pizza'
-}
+samplePizzas = [
+	{
+		name: 'Cheese <Sample Pizza>',
+		toppings: [
+			{name: 'Mozzarella', type: 'cheese', strength: 1.0},
+		],
+	},
+	{
+		name: 'Pepperoni <Sample Pizza>',
+		toppings: [
+			{name: 'Pepperoni', type: 'meat', strength: 1.0, oiliness: 1},
+		],
+	},
+	{
+		name: 'Sausage <Sample Pizza>',
+		toppings: [
+			{name: 'Sausage', type: 'meat', strength: 1.0, oiliness: 1},
+		],
+	},
+]
 
 pizzeria = {
 	name: 'Sample Pizzeria',
 	boxes: [
 		{
-			name: 'Sample Box',
-			pizza: new PizzaFactory(samplePizza)
+			name: 'Sample Box A',
+			pizza: new PizzaFactory(samplePizzas[0])
+		},
+		{
+			name: 'Sample Box B',
+			pizza: new PizzaFactory(samplePizzas[1])
+		},
+		{
+			name: 'Sample Box B',
+			pizza: new PizzaFactory(samplePizzas[2])
+		},
+		{
+			name: 'Sample Empty Box'
 		}
 	],
 	displays: [],

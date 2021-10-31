@@ -8,12 +8,37 @@
 </body>
 
 <template name="app">
-	{{> printJSON pizzeria }}
+	<h1>{{pizzeria.name}}</h1>
+	<h2>Ovens</h2>
+		{{#each pizzeria.ovens}}
 
-	{{> pizza samplePizza}}
+		{{/each}}
+	<h2>Boxes</h2>
+	{{#each pizzeria.boxes}}
+		<div>
+			<p>
+				<b>NAME: </b>
+				{{name}}
+			</p>
+			<p>
+				<b>PIZZA: </b>
+				{{#if pizza}}
+					{{pizza.id}}
+					{{> pizza pizza}}
+				{{else}}
+					<i>EMPTY</i>
+				{{/if}}
+			</p>
+		</div>
+		<hr>
+	{{/each}}
+
+
 </template>
 
 <template name="pizza">
-	<i>Pizza</i>
-	{{foo}}
+	<div>
+		<i>{{name}}</i>
+		{{> printJSON this}}
+	</div>
 </template>
