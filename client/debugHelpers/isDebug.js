@@ -26,9 +26,39 @@ let ensureIsDebugSet = function()
 	}
 };
 
+Template.registerHelper('isDebug', function()
+{
+	return isDebug();
+});
+
 Template.isDebug.helpers({
-	isDebug: function()
+	foo: function ()
 	{
-		return isDebug(); // Return helper above
-	}
+		return {
+			'foo': 'bar',
+			'date': new Date()
+		}
+	},
+});
+
+
+Template.printJSON.helpers({
+	printJSON: function ()
+	{
+		if (!isDebug()) return;
+		var obj = Template.instance().data;
+		if (!obj) return;
+		return JSON.stringify(obj, null, "\t"); // stringify with tabs inserted at each level
+	},
+});
+
+Template.logObject.helpers({
+	logObject: function ()
+	{
+		if (!isDebug()) return;
+
+		var obj = Template.instance().data;
+		if (!obj) return;
+		console.log("Logging Object\n\t%o", obj);
+	},
 });

@@ -1,0 +1,26 @@
+
+<template name="isDebug">
+	{{#if isDebug}}
+		<p>Debug</p>
+	{{/if}}
+
+	{{#if isDebug}}
+		{{> printJSON foo}}
+		{{> logObject foo}}
+	{{/if}}
+
+</template>
+
+<template name="printJSON">
+	{{#if isDebug}}
+		<div>
+			<pre><code>{{printJSON}}</code></pre>
+		</div>
+	{{/if}}
+</template>
+
+<template name="logObject">
+	{{#if isDebug}}
+		{{logObject}}
+	{{/if}}
+</template>
