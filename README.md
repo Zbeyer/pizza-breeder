@@ -5,15 +5,15 @@ A game about breeding pizza
 
 
 
-| **Toppings**           | [{name, weight, traits (oiliness)}]                          |      |
-| ---------------------- | ------------------------------------------------------------ | ---- |
-| Diameter               | Grows with age to fill container:                            |      |
-| Maturity Rate          | How quickly does a pizza transforms from young (each stage can add additional traits. High maturity rate & high preservation allows a pizza to reach epic, ancient, etc). |      |
-| Preservation           | How long is a pizza's average life expectancy (before it dies) |      |
-| Growth Rate            | How quickly does the pizza advance in diameter               |      |
-| Thin / Doughy          | Float Interpolation                                          |      |
-| Crispiness / Sogginess | Float: Interpolation                                         |      |
-| Boxed Date             | When a pizza is boxed its age is suspend according to the quality of its box (simple, advanced, Golden, etc) Boxed pizzas cannot grow larger. |      |
-|                        |                                                              |      |
-|                        |                                                              |      |
+| **Toppings**             | [{name, weight, traits (oiliness)}]                          |      |
+| ------------------------ | ------------------------------------------------------------ | ---- |
+| Diameter                 | <Number>* Grows with age to fill container:                  |      |
+| MaturityRate             | <Number> How quickly does a pizza transforms from young (each stage can add additional traits. High maturity rate & high preservation allows a pizza to reach epic, ancient, etc). |      |
+| PreservationScore        | <Number> How long is a pizza's average life expectancy (before it dies) |      |
+| Growth Rate              | <Number> How quickly does the pizza advance in diameter      |      |
+| Thin vs. Doughy          | <Float> Interpolation between 0 & 1                          |      |
+| Crispiness vs. Sogginess | <Float> Float: Interpolation 0 & 1                           |      |
+| Boxed Date               | <Date> When a pizza is boxed its age is suspend according to the quality of its box (simple, advanced, Golden, etc) Boxed pizzas cannot grow larger.<br />Boxed Pizzas do not age while game is closed* |      |
+|                          |                                                              |      |
+|                          |                                                              |      |
 
