@@ -14,7 +14,6 @@ PizzaFactory = class PizzaFactory {
 		// this.diameter = props.diameter;
 		// this.size = props.size;
 	}
-
 };
 
 // ZBEYER: figure out how to export this later

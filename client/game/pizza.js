@@ -8,13 +8,13 @@ samplePizzas = [
 	{
 		name: 'Pepperoni <Sample Pizza>',
 		toppings: [
-			{name: 'Pepperoni', type: 'meat', strength: 1.0, oiliness: 1},
+			{name: 'Pepperoni', type: 'meat', strength: 1.0, oiliness: 2.0},
 		],
 	},
 	{
 		name: 'Sausage <Sample Pizza>',
 		toppings: [
-			{name: 'Sausage', type: 'meat', strength: 1.0, oiliness: 1},
+			{name: 'Sausage', type: 'meat', strength: 1.0, oiliness: 3.0},
 		],
 	},
 ]
