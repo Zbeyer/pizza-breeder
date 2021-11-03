@@ -1,5 +1,6 @@
 import PizzaFactory from "./factories/PizzaFactory";
 import BoxFactory from "./factories/BoxFactory";
+import BreederFactory from "./factories/BreederFactory";
 import PizzeriaFactory from "./factories/zPizzeriaFactory";
 
 let loadSamplePizzaria = function()
@@ -38,6 +39,12 @@ let loadSamplePizzaria = function()
 
 	Session.set('activePizzeria', samplePizzeria);
 	console.log('loaded sample pizzeria: %o', Session.get('activePizzeria'));
+
+	let sampleBreeder = new BreederFactory();
+	sampleBreeder.pizzaA = samplePizzas[0];
+	sampleBreeder.pizzaB = samplePizzas[1];
+	sampleBreeder.calcToppings();
+	console.log('sampleBreeder.toppings: %o', sampleBreeder.toppings);
 };
 
 export {loadSamplePizzaria};
