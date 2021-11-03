@@ -5,7 +5,7 @@ let EntityFactory = class EntityFactory extends Factory
 {
 	constructor(props)
 	{
-		super(props); // you're missing this
+		super(props);
 		if (!this.id) this.id = Random.id();
 	}
 };
