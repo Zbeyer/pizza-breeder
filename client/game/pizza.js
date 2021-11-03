@@ -1,20 +1,23 @@
+
+import PizzaFactory from "./factories/PizzaFactory";
+
 samplePizzas = [
 	{
 		name: 'Cheese <Sample Pizza>',
 		toppings: [
-			{name: 'Mozzarella', type: 'cheese', strength: 1.0},
+			new ToppingFactory({name: 'Mozzarella', type: 'cheese', strength: 1.0}),
 		],
 	},
 	{
 		name: 'Pepperoni <Sample Pizza>',
 		toppings: [
-			{name: 'Pepperoni', type: 'meat', strength: 1.0, oiliness: 2.0},
+			new ToppingFactory({name: 'Pepperoni', type: 'meat', strength: 1.0, oiliness: 2.0}),
 		],
 	},
 	{
 		name: 'Sausage <Sample Pizza>',
 		toppings: [
-			{name: 'Sausage', type: 'meat', strength: 1.0, oiliness: 3.0},
+			new ToppingFactory({name: 'Sausage', type: 'meat', strength: 1.0, oiliness: 3.0}),
 		],
 	},
 ]
